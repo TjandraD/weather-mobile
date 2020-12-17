@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_mobile/screens/home_screen.dart';
+import '../constants.dart';
 
 class SplashScreen extends StatefulWidget {
   static String id = 'splash_screen';
@@ -13,12 +14,32 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 5), () {
-      Navigator.pushNamed(context, HomeScreen.id);
+      // Navigator.pushNamed(context, HomeScreen.id);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            'Weather',
+            style: kSplashTitleStyle,
+          ),
+          Text(
+            'Created by Tjandra Darmo',
+            style: kSplashNameStyle,
+          ),
+          SizedBox(
+            width: double.infinity,
+            height: 40,
+          ),
+          CircularProgressIndicator(),
+        ],
+      ),
+    );
   }
 }
