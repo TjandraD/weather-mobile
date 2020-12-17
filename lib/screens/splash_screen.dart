@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
+  static String id = 'splash_screen';
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
