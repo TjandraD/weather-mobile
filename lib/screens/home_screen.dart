@@ -181,7 +181,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, DetailScreen.id);
+                            Navigator.pushNamed(context, DetailScreen.id,
+                                arguments:
+                                    'assets/svg/${weatherIconList[mainIcon]}');
                           },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
