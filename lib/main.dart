@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_mobile/screens/detail_screen.dart';
 import 'package:weather_mobile/screens/home_screen.dart';
 import 'screens/splash_screen.dart';
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.id: (context) => SplashScreen(),
         HomeScreen.id: (context) => HomeScreen(),
+        DetailScreen.id: (context) => DetailScreen(),
       },
     );
   }
