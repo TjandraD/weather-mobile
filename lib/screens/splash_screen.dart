@@ -21,24 +21,29 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'Weather',
-            style: kSplashTitleStyle,
-          ),
-          Text(
-            'Created by Tjandra Darmo',
-            style: kSplashNameStyle,
-          ),
-          SizedBox(
-            width: double.infinity,
-            height: 40,
-          ),
-          CircularProgressIndicator(),
-        ],
+      body: Container(
+        decoration: kGradientBoxDecoration,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Weather',
+              style: kSplashTitleStyle,
+            ),
+            Text(
+              'Created by Tjandra Darmo',
+              style: kSplashNameStyle,
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: 40,
+            ),
+            CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue[900]),
+            ),
+          ],
+        ),
       ),
     );
   }
