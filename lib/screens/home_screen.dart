@@ -46,41 +46,43 @@ class _HomeScreenState extends State<HomeScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: Stack(
-        children: [
-          Stack(
-            children: [
-              Container(
-                height: screenHeight,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.7), BlendMode.dstATop),
-                    fit: BoxFit.fitHeight,
-                    image: AssetImage('assets/images/bg.png'),
-                  ),
-                ),
-              ),
-              AnimatedPositioned(
-                duration: Duration(milliseconds: 250),
-                top: acceleration.y * iconMotionSensitivity,
-                bottom: acceleration.y * -iconMotionSensitivity,
-                right: acceleration.x * -iconMotionSensitivity,
-                left: acceleration.x * iconMotionSensitivity,
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Padding(
-                    padding: EdgeInsets.only(top: screenHeight / 6),
+      body: Container(
+        height: screenHeight,
+        width: screenWidth,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [
+                Color(0xFF2193b0),
+                Color(0xFF6dd5ed),
+              ]),
+        ),
+        child: Stack(
+          children: [
+            AnimatedPositioned(
+              duration: Duration(milliseconds: 250),
+              top: acceleration.y * iconMotionSensitivity,
+              bottom: acceleration.y * -iconMotionSensitivity,
+              right: acceleration.x * -iconMotionSensitivity,
+              left: acceleration.x * iconMotionSensitivity,
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: EdgeInsets.only(top: screenHeight / 6),
+                  child: Hero(
+                    tag: 'icon',
                     child: SvgPicture.asset(
                       'assets/svg/${weatherIconList[mainIcon]}',
+                      // color: Colors.grey[850],
                       width: screenWidth - 200,
                     ),
                   ),
                 ),
-              )
-            ],
-          ),
-        ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
