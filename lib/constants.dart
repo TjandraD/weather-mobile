@@ -11,3 +11,13 @@ TextStyle kSplashNameStyle = TextStyle(
   fontSize: 14,
   fontStyle: FontStyle.italic,
 );
+
+BoxDecoration kGradientBoxDecoration = BoxDecoration(
+  gradient: LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: [
+        Color(0xFF2193b0),
+        Color(0xFF6dd5ed),
+      ]),
+);

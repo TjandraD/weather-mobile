@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sensors/sensors.dart';
+import 'package:weather_mobile/constants.dart';
 import '../models/weather_svg.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -49,15 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         height: screenHeight,
         width: screenWidth,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [
-                Color(0xFF2193b0),
-                Color(0xFF6dd5ed),
-              ]),
-        ),
+        decoration: kGradientBoxDecoration,
         child: Stack(
           children: [
             AnimatedPositioned(
