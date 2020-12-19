@@ -39,6 +39,11 @@ TextStyle kTempStyle = TextStyle(
   fontSize: 48,
 );
 
+TextStyle kDetailInfo = TextStyle(
+  fontFamily: 'Montserrat',
+  fontSize: 14,
+);
+
 BoxDecoration kGradientBoxDecoration = BoxDecoration(
   gradient: LinearGradient(
       begin: Alignment.centerLeft,
