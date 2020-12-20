@@ -22,56 +22,58 @@ class _DetailScreenState extends State<DetailScreen> {
         width: screenWidth,
         height: screenHeight,
         decoration: kGradientBoxDecoration,
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(
-                left: screenWidth / 15,
-                top: screenHeight / 8,
-                right: screenWidth / 15,
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Hero(
-                    tag: 'icon',
-                    child: SvgPicture.asset(
-                      iconPath,
-                      width: screenWidth / 10,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                  left: screenWidth / 15,
+                  top: screenHeight / 8,
+                  right: screenWidth / 15,
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Hero(
+                      tag: 'icon',
+                      child: SvgPicture.asset(
+                        iconPath,
+                        width: screenWidth / 10,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'December 20',
-                        style: kDetailInfo,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Jakarta',
-                        style: kDetailInfo,
-                      ),
-                    ],
-                  ),
-                ],
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'December 20',
+                          style: kDetailInfo,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Jakarta',
+                          style: kDetailInfo,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: weeklyChart(context),
-            ),
-          ],
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: weeklyChart(context),
+              ),
+            ],
+          ),
         ),
       ),
     );
