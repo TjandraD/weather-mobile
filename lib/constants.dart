@@ -39,6 +39,11 @@ TextStyle kTempStyle = TextStyle(
   fontSize: 48,
 );
 
+TextStyle kBigTempStyle = TextStyle(
+  fontFamily: 'Montserrat',
+  fontSize: 72,
+);
+
 TextStyle kDetailInfo = TextStyle(
   fontFamily: 'Montserrat',
   fontSize: 14,

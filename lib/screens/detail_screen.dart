@@ -66,6 +66,13 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
               ),
               SizedBox(
+                height: 16,
+              ),
+              Text(
+                '28° C',
+                style: kBigTempStyle,
+              ),
+              SizedBox(
                 height: 10,
               ),
               Padding(
@@ -157,7 +164,11 @@ class _DetailScreenState extends State<DetailScreen> {
         color: isSelected ? Colors.white70 : null,
         borderRadius: BorderRadius.circular(50),
       ),
-      child: Center(child: Text(text)),
+      child: Center(
+          child: Text(
+        text,
+        style: TextStyle(color: isSelected ? Colors.black : Colors.white),
+      )),
     );
   }
 }
