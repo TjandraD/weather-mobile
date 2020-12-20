@@ -102,114 +102,112 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                   ],
                 ),
-                child: Expanded(
-                  child: Column(
-                    children: [
-                      IntrinsicHeight(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    '25 Km',
-                                    style: kMainCardDetail,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  SvgPicture.asset(
-                                    'assets/svg/visibility.svg',
-                                    color: Colors.black,
-                                  ),
-                                ],
-                              ),
+                child: Column(
+                  children: [
+                    IntrinsicHeight(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Text(
+                                  '25 Km',
+                                  style: kMainCardDetail,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                SvgPicture.asset(
+                                  'assets/svg/visibility.svg',
+                                  color: Colors.black,
+                                ),
+                              ],
                             ),
-                            VerticalDivider(
-                              width: 1,
-                              color: Colors.black,
+                          ),
+                          VerticalDivider(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Text(
+                                  '1007hPa',
+                                  style: kMainCardDetail,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                SvgPicture.asset(
+                                  'assets/svg/speed.svg',
+                                  color: Colors.black,
+                                ),
+                              ],
                             ),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    '1007hPa',
-                                    style: kMainCardDetail,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  SvgPicture.asset(
-                                    'assets/svg/speed.svg',
-                                    color: Colors.black,
-                                  ),
-                                ],
-                              ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(
+                      height: 1,
+                      color: Colors.black,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    IntrinsicHeight(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Text(
+                                  '24.8 Km/h',
+                                  style: kMainCardDetail,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                SvgPicture.asset(
+                                  'assets/svg/windy.svg',
+                                  color: Colors.black,
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Divider(
-                        height: 1,
-                        color: Colors.black,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      IntrinsicHeight(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    '24.8 Km/h',
-                                    style: kMainCardDetail,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  SvgPicture.asset(
-                                    'assets/svg/windy.svg',
-                                    color: Colors.black,
-                                  ),
-                                ],
-                              ),
+                          ),
+                          VerticalDivider(
+                            width: 1,
+                            color: Colors.black,
+                          ),
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Text(
+                                  '60%',
+                                  style: kMainCardDetail,
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                SvgPicture.asset(
+                                  'assets/svg/hum.svg',
+                                  color: Colors.black,
+                                ),
+                              ],
                             ),
-                            VerticalDivider(
-                              width: 1,
-                              color: Colors.black,
-                            ),
-                            Expanded(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    '60%',
-                                    style: kMainCardDetail,
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  SvgPicture.asset(
-                                    'assets/svg/hum.svg',
-                                    color: Colors.black,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
                 ),
               ),
             ],
