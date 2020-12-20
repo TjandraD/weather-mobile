@@ -88,7 +88,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Container(
-                    height: screenHeight / 3,
                     margin: EdgeInsets.only(bottom: 50, left: 25, right: 25),
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -103,106 +102,108 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    child: Column(
-                      children: [
-                        Text(
-                          'Today',
-                          style: kDayStyle,
-                        ),
-                        Text(
-                          '28° C',
-                          style: kTempStyle,
-                          textAlign: TextAlign.center,
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Divider(
-                          height: 1,
-                          color: Colors.black,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        IntrinsicHeight(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      '24.8 Km/h',
-                                      style: kMainCardDetail,
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    SvgPicture.asset(
-                                      'assets/svg/windy.svg',
-                                      color: Colors.black,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              VerticalDivider(
-                                width: 1,
-                                color: Colors.black,
-                              ),
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      '60%',
-                                      style: kMainCardDetail,
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    SvgPicture.asset(
-                                      'assets/svg/hum.svg',
-                                      color: Colors.black,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                    child: Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            'Today',
+                            style: kDayStyle,
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Divider(
-                          height: 1,
-                          color: Colors.black,
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(context, DetailScreen.id,
-                                arguments:
-                                    'assets/svg/${weatherIconList[mainIcon]}');
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text(
-                                'More details',
-                                style: kMoreDetailsStyle,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Colors.lightBlue[900],
-                              ),
-                            ],
+                          Text(
+                            '28° C',
+                            style: kTempStyle,
+                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Divider(
+                            height: 1,
+                            color: Colors.black,
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          IntrinsicHeight(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        '24.8 Km/h',
+                                        style: kMainCardDetail,
+                                      ),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      SvgPicture.asset(
+                                        'assets/svg/windy.svg',
+                                        color: Colors.black,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                VerticalDivider(
+                                  width: 1,
+                                  color: Colors.black,
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        '60%',
+                                        style: kMainCardDetail,
+                                      ),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
+                                      SvgPicture.asset(
+                                        'assets/svg/hum.svg',
+                                        color: Colors.black,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Divider(
+                            height: 1,
+                            color: Colors.black,
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, DetailScreen.id,
+                                  arguments:
+                                      'assets/svg/${weatherIconList[mainIcon]}');
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'More details',
+                                  style: kMoreDetailsStyle,
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.lightBlue[900],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
